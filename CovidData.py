@@ -1,3 +1,10 @@
+def total_deaths (deaths):
+    tot = 0
+    for i in deaths:
+        tot += i
+    return tot
+    
+
 # import libraries for the project
 
 import pandas as pd
@@ -25,5 +32,25 @@ print()
 print()
 print()
 
-### Describe the dataset
-print(df_covid.describe)
+# ### Describe the dataset
+print(df_covid.describe())
+print()
+print()
+print()
+
+### get info
+print(df_covid.info())
+print()
+print()
+print()
+
+
+death_col = df_covid['Deaths']
+print(death_col)
+print()
+print()
+
+print("Total Deaths in USA: ", total_deaths(death_col))
+# ### plot of the Population & Infected people
+df_covid[['Population', 'Tested','Infected']].plot()
+plt.show()
