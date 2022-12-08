@@ -143,3 +143,6 @@ plt.xlabel('States')
 plt.ylabel('Values')
 plt.title('Income and GDP')
 plt.show()
+
+
+
